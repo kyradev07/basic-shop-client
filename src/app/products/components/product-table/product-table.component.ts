@@ -24,13 +24,15 @@ export class ProductTableComponent implements OnInit {
   }
 
   pagar() {
-    this.estaPago = true;
-    this.carritoService.carrito = [];
-    this.products.set([]);
-    setTimeout(() => {
-      this.estaPago = false;
-      this.route.navigate(['/']).then();
-    }, 2000);
+    if (this.products().length) {
+      this.estaPago = true;
+      this.carritoService.carrito = [];
+      this.products.set([]);
+      setTimeout(() => {
+        this.estaPago = false;
+        this.route.navigate(['/']).then();
+      }, 2000);
+    }
   }
 
   vaciarCarrito() {

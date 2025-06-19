@@ -46,12 +46,14 @@
       }
     </tbody>
   </table>
-  <h1>Total a pagar: {{calcularTotal() | currency}}</h1>
-  <br>
-  <button class="btn btn-outline btn-info" (click)="pagar()">Pagar</button>
+  <span class="text-secondary">Total a pagar: {{calcularTotal() | currency}}</span>
   <br>
   <br>
-  <button class="btn btn-outline btn-accent" (click)="vaciarCarrito()">Vaciar carrito y regresar</button>
+  <div style="display: flex; justify-content: space-between">
+    <button class="btn btn-outline btn-info" (click)="pagar()">Pagar</button>
+    <button class="btn btn-outline btn-accent" (click)="vaciarCarrito()">Vaciar carrito y regresar</button>
+  </div>
+
 </div>
 
 
