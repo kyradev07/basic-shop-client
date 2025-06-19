@@ -20,4 +20,8 @@ export class ProductsService {
     return this.http.get<Product>(`${baseUrl}product/${id}`)
   }
 
+  updateProduct(id: number, product: Product): Observable<Product> {
+    return this.http.patch<Product>(`${baseUrl}${id}`, product);
+  }
+
 }

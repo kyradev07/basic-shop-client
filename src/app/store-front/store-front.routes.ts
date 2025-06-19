@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CategoryPageComponent } from './pages/gender-page/category-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ProductTableComponent } from '@products/components/product-table/product-table.component';
 
 export const storeFrontRoutes: Routes = [
   {
@@ -23,7 +24,10 @@ export const storeFrontRoutes: Routes = [
         path: 'product/:id',
         component: ProductPageComponent,
       },
-
+      {
+        path: 'carrito',
+        component: ProductTableComponent,
+      },
       {
         path: '**',
         component: NotFoundPageComponent,

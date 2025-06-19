@@ -27,8 +27,15 @@
       </p>
       <br>
       <p>
-        <b>Stock:</b> {{ productResource.value()?.stock }}
+        <b>Stock:</b>  {{ this.productResource.value()!.stock }}
       </p>
+      <br>
+      <p>
+        <button class="btn btn-outline btn-sm" (click)="remove()">-</button>  <span style="font-size: larger; margin: 5px">{{cantidad()}}</span>   <button class="btn btn-outline btn-sm" (click)="add()">+</button>
+      </p>
+      <br>
+      <button class="btn btn-outline btn-info" (click)="agregarCarrito()">Agregar al Carrito</button>
+      <br>
       <br>
       <button class="btn btn-outline btn-accent" [routerLink]="['']">Atrás</button>
     </div>
